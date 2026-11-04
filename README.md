@@ -48,7 +48,7 @@ Ter o **Docker** e o **Docker Compose** instalados ([Docker Desktop](https://www
 
 ### Passo 1 – Baixar o projeto
 ```bash
-git clone https://github.com/SEU-USUARIO/login-seguro.git
+git clone https://github.com/kauesalazarcardoso/login-seguro.git
 cd login-seguro
 ```
 
@@ -71,6 +71,8 @@ docker compose up --build
 
 ### Passo 4 – Abrir no navegador
 Acesse **http://localhost:5000** 🎉
+
+> Se a porta 5000 já estiver ocupada no seu computador, troque o valor de `PORTA` no `.env` (por exemplo `PORTA=5001`) e acesse `http://localhost:5001`.
 
 Para parar o sistema, aperte `Ctrl + C` ou rode `docker compose down`.
 
