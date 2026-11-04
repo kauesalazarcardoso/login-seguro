@@ -185,16 +185,6 @@ O `.gitignore` impede que o `.env` (com a chave secreta) e o banco de dados (`da
 
 ---
 
-## ⚠️ Limitações (o que melhoraria numa versão real)
-
-- Envio de e-mail de verdade (SMTP) na recuperação de senha.
-- HTTPS na frente da aplicação (por exemplo com Nginx ou um serviço como Cloudflare).
-- Limite de tentativas também por IP, e não só por conta.
-- Autenticação em dois fatores (2FA).
-- Um banco mais robusto, como PostgreSQL, se houver muitos usuários.
-
----
-
 ## 👤 Autor
 
 **Kauê Salazar Cardoso**
