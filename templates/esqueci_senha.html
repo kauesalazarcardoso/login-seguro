@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Recuperar senha</h1>
+<p><small>Informe seu e-mail. Se ele estiver cadastrado, enviaremos um link válido por 15 minutos.</small></p>
+<form method="post">
+  <input type="hidden" name="csrf" value="{{ token_csrf() }}">
+  <label>E-mail <input name="email" type="email" required autocomplete="email"></label>
+  <button type="submit">Enviar link</button>
+</form>
+<div class="links"><a href="{{ url_for('login') }}">Voltar</a></div>
+{% endblock %}

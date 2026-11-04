@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    container_name: login-seguro
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - dados:/app/dados
+    restart: unless-stopped
+
+volumes:
+  dados:

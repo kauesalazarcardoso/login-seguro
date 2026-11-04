@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Criar conta</h1>
+<form method="post">
+  <input type="hidden" name="csrf" value="{{ token_csrf() }}">
+  <label>Usuário <input name="usuario" required minlength="3" maxlength="30" autocomplete="username"></label>
+  <label>E-mail <input name="email" type="email" required autocomplete="email"></label>
+  <label>Senha <input name="senha" type="password" required minlength="8" autocomplete="new-password"></label>
+  <small>Mínimo 8 caracteres, com maiúscula, minúscula, número e símbolo.</small>
+  <label>Confirmar senha <input name="confirmar" type="password" required autocomplete="new-password"></label>
+  <button type="submit">Cadastrar</button>
+</form>
+<div class="links"><a href="{{ url_for('login') }}">Já tenho conta</a></div>
+{% endblock %}

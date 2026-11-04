@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Olá, {{ usuario }}!</h1>
+<p>Você está logado em uma área protegida.</p>
+<form method="post" action="{{ url_for('logout') }}">
+  <input type="hidden" name="csrf" value="{{ token_csrf() }}">
+  <button type="submit">Sair</button>
+</form>
+{% endblock %}
